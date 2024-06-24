@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+body {
+    background-color: #000;
+    color: #eee;
+    font-family: Coves;
+    
+}
+
+p {
+    font-family: Coves;
+}
+h1 {
+    font-family: Coves;
+}
+
+#root {
+    z-index: 3;
+    position: relative;
+}
+
+#blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(to right, blue, red);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(200px);
+    z-index: -1;
+    animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(10%) translateY(10%);
+    }
+    100% {
+        transform: translateX(-10%) translateY(-10%);
+    }
+}
+
+#contact-img {
+    
+}
